@@ -1,4 +1,4 @@
-package edu.javacourse.collection;
+package com.company;
 
 public class Student {
     private String name;
@@ -22,10 +22,34 @@ public class Student {
         System.out.println("Средний балл: " + student.averageScore);
     }
 
+    @Override
+    public String toString() {
+        return lastName + " " + name + " " + age + " " + number + " " + averageScore;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public String getLastName(){
+        return this.lastName;
+    }
+
+    public int getAge(){
+        return this.age;
+    }
+
+    public int getNumber(){
+        return this.number;
+    }
+
+    public double getScore(){
+        return this.averageScore;
+    }
+
     public static void main(String[] args){
         Student student = new Student(11, "Саша", "В", 20, 4);
         student.printInfo(student);
     }
-    
-}
 
+}
